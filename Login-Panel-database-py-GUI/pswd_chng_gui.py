@@ -111,7 +111,3 @@ class Pswd_chng_Window(ttk.Frame):
 
 
     
-if __name__ == '__main__':
-    root = Tk()
-    Pswd_chng_Window(root)
-    root.mainloop()
