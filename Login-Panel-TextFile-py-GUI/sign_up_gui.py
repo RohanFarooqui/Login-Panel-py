@@ -75,7 +75,7 @@ class Sign_up(ttk.Frame):
 
     def init_gui(self):
         """Builds GUI."""
-        self.root.title('Change Password')
+        self.root.title('Signup')
         self.root.wm_iconbitmap('pic/logo.ico')
         self.root.geometry("450x230")
         windowHeight = 230
