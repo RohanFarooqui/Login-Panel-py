@@ -16,7 +16,8 @@ from Scripts.Db_connection import *
 ##GUI files
 from pswd_chng_gui import *
 from sign_up_gui import *
-
+##Other Imp
+import webbrowser
 
 
 #Code Start Here
@@ -28,7 +29,18 @@ class Main_Window(ttk.Frame):
         ttk.Frame.__init__(self, parent, *args, **kwargs)
         self.root = parent
         self.init_gui()
-        
+
+    ##URL Links Binding
+    def feedback(self):
+         webbrowser.open_new("https://drive.google.com/open?id=16TRryXb7NgI2qYuMM5phNpDqJDTdivXaBJsk5ffDNZM")
+
+    def github(self):
+         webbrowser.open_new("http://www.github.com/LOL-32")
+
+    def website(self):
+         webbrowser.open_new("http://www.rohanfarooqui.wordpress.com")
+
+    ##Functions
     def on_quit(self,event):
         self.root.destroy()
            
@@ -124,10 +136,10 @@ class Main_Window(ttk.Frame):
         menubar.add_cascade(label="File", menu=filemenu)
 
         editmenu = Menu(menubar, tearoff=0)
-        editmenu.add_command(label=" Google-Feedback",font=("Times",10))
-        editmenu.add_command(label=" Github Code-link",font=("Times",10)) 
-        editmenu.add_command(label=" My Website",font=("Times",10))
-        menubar.add_cascade(label="Feed Back // Code Link", menu=editmenu, command=self.root.destroy)
+        editmenu.add_command(label=" Google-Feedback",font=("Times",10),command=self.feedback)
+        editmenu.add_command(label=" Github Code-link",font=("Times",10),command=self.github) 
+        editmenu.add_command(label=" My Website",font=("Times",10),command=self.website)
+        menubar.add_cascade(label="Feed Back // Code Link", menu=editmenu)
 
         self.root.config(menu=menubar)
         
