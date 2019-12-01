@@ -21,7 +21,8 @@
               CLI-TEXT FILE && GUI-TEXT FILE : (Link will Update soon !!!)
               GUI-DATABASE                   : (Link will Update soon !!!)
               
- Video  of Project :  (Link will Update soon !!!)
+ Video  of Project :  
+              CLI-TEXT FILE : https://youtu.be/cCEa635v0bA
 
 
 Thanks
