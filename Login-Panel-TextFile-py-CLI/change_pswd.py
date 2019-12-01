@@ -1,24 +1,30 @@
+##Import Goes Here ###
+##Import Libraries 
 import os
 import hashlib
 import getpass
+import time
+##Import Files
 from check_name_pswd import check_names_pswd
+
+
 def change_pswd():
    os.system('cls')
-   Name = str(input("Enter Your Name : "))
+   Name = str(input("                            Enter Your Name : "))
    Name1= Name.upper()
    hash1= hashlib.md5(Name1.encode())
    hex_dig1 = hash1.hexdigest()
 
-   Pswd = getpass.getpass("Enter your Current password: ")
+   Pswd = getpass.getpass("                            Enter your Current password: ")
    hash2= hashlib.md5(Pswd.encode())
    hex_dig2 = hash2.hexdigest()
       
    if(check_names_pswd(hex_dig1,hex_dig2)== True):
-      Pswd1= getpass.getpass("Enter your New password :")
+      Pswd1= getpass.getpass("                            Enter your New password :")
       hash3=hashlib.md5(Pswd1.encode())
       hex_dig3 = hash3.hexdigest()
 
-      Pswd2= getpass.getpass("Re-Enter your password :")
+      Pswd2= getpass.getpass("                            Re-Enter your password :")
       hash4=hashlib.md5(Pswd2.encode())
       hex_dig4 = hash4.hexdigest()
       if(hex_dig3 == hex_dig4):
@@ -45,7 +51,10 @@ def change_pswd():
             file1.write(" ")
             file1.write(i[1]+'\n')
          file.close()
+         return True
       else:
-         print("Password NOT match")
+         print("                            Password NOT match")
+         time.sleep(1)
    else:
-      print("Current Password is INCORRECT")
+      print("                            Current Password is INCORRECT")
+      time.sleep(1)

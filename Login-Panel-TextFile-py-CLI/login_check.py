@@ -1,17 +1,24 @@
+##Import Goes Here ###
+##Import Libraries 
 import os
 import hashlib
 import getpass
 from timer import timer
 import time
 
+##Import Files
+from timer import *
+
+
+### Code start Here ###
 def Login_check():
  n = 3
- Name = str(input("Enter Your Name : "))
+ Name = str(input("                            Enter Your Name : "))
  Name1= Name.upper()
  hash1= hashlib.md5(Name1.encode())
  hex_dig1 = hash1.hexdigest()
  while(n > 0):
-     Pswd = getpass.getpass("Enter your password: ")
+     Pswd = getpass.getpass("                            Enter your password: ")
      hash2= hashlib.md5(Pswd.encode())
      hex_dig2 = hash2.hexdigest()
      file = open("login.txt","r")
@@ -28,22 +35,11 @@ def Login_check():
          elif(lis[i+1] != hex_dig2):
            n=n-1
            if(n > 0):
-             print(n," Tries Left, Total Tries are '3' ")            
+             print("                      ",n,"Tries Left, Total Tries are '3' ")            
            else:
-             print("Max tries Limit i.e 3 reached, Try Again")
+             print("                     Max tries Limit i.e 3 reached, Try Again")
+             timer(5)
              return False
       elif(hex_dig1 not in lis):return None
     
-
-'''
-
-x=Login_check()
-
-if(x == True):
-     print("Welcome")
-elif(x == False):
-     print("Password is Incorrect, but user in data base")
-     
-elif(x == None):
-     print("User Not in Database")'''
 
