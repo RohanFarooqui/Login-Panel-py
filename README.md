@@ -1,5 +1,4 @@
 ![](https://github.com/LOL-32/Login-Panel-py/blob/master/login_panel_gui.png)
-
 ![](https://github.com/LOL-32/Login-Panel-py/blob/master/login_panel_cli.png)
 
 # **Login Panel in Python (CLI & GUI) - Tkinter** :
