@@ -23,6 +23,22 @@ This Login Panel is made in 3 different categories :
  Graphical-User-Interface (GUI) : https://www.youtube.com/watch?v=X8anLH9UfVw
  
  Command-Line-Interface   (CLI) : https://www.youtube.com/watch?v=m0FzGyWdlkE
+ 
+ 
+### **To Run this Code** :
 
+ ### *Command Line*: 
+            * Just Run The Code
+ 
+ ### *GUI* : 
+            * pip install tkinter
+            * pip install ttkthemes 
+            * pip install webbrowser
+ 
+ ### *GUI with MySql*:
+            * pip install tkinter
+            * pip install ttkthemes 
+            * pip install webbrowser
+            * pip install Pymysql
 
 
